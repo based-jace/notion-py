@@ -525,13 +525,13 @@ class CollectionRowBlock(PageBlock):
             valid_options = [p["value"].lower() for p in prop["options"]]
             if not isinstance(val, list):
                 val = [val]
-            for v in val:
-                if v.lower() not in valid_options:
-                    raise ValueError(
-                        "Value '{}' not acceptable for property '{}' (valid options: {})".format(
-                            v, identifier, valid_options
-                        )
-                    )
+#             for v in val:
+#                 if v.lower() not in valid_options:
+#                     raise ValueError(
+#                         "Value '{}' not acceptable for property '{}' (valid options: {})".format(
+#                             v, identifier, valid_options
+#                         )
+#                     )
             val = [[",".join(val)]]
         if prop["type"] in ["person"]:
             userlist = []
